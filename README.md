@@ -4,7 +4,7 @@ Example project to help answer this question: [Running rspec over dynomite model
 
 ## Some Tips
 
-Recommend creating a `dynamodb-local` IAM user. The tools like https://github.com/aaronshaf/dynamodb-admin assume you have `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` setup. Looks like Jets is calling out to get the AWS account id in some cases too. Know it's a little silly to create an IAM user for this, but dynamodb-local creates a DB on your filesystem that includes the AWS_ACCESS_KEY_ID in the DB name. It looks something like this.
+Recommend creating a `dynamodb-local` IAM user. The tools like https://github.com/aaronshaf/dynamodb-admin assume you have `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` setup. For the IAM User permission give it *nothing*, it doesn't need any actual IAM permissions. Looks like Jets is calling out to get the AWS account id in some cases too. Know it's a little silly to create an IAM user for this, but dynamodb-local creates a DB on your filesystem that includes the AWS_ACCESS_KEY_ID in the DB name. It looks something like this.
 
     $ ls /usr/local/Caskroom/dynamodb-local/latest/*.db
     /usr/local/Caskroom/dynamodb-local/latest/your-aws-secret-access-key_us-west-2.db

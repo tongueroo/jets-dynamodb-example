@@ -34,7 +34,7 @@ Test development with `jets console`.
 
 Then I checked that the `.db` file was created in the right space on the filesystem: `/usr/local/Caskroom/dynamodb-local/latest/your-aws-secret-access-key_us-west-2.db`  Also used dynamodb-admin to check if the table exists:
 
-![dynamodb-admin-check-dev|690x253](upload://pXGJtVHXbPG0BTXnMIzhqwTMfKt.png)
+![dynamodb-admin-check-dev|690x253](https://raw.githubusercontent.com/tongueroo/jets-dynamodb-example/master/screenshots/dynamodb-admin-check-dev.png)
 
 Then did the same thing for testing. First migrate the test DB.
 
@@ -45,7 +45,7 @@ Then did the same thing for testing. First migrate the test DB.
 
 Remember to check the `/usr/local/Caskroom/dynamodb-local/latest/` folder the `*.db` file again. And dynamodb-admin again
 
-![dynamodb-admin-check-test|690x304](upload://jb8io6YPepv66EApxoEqt9b7EK4.png)
+![dynamodb-admin-check-test|690x304](https://raw.githubusercontent.com/tongueroo/jets-dynamodb-example/master/screenshots/dynamodb-admin-check-test.png)
 
 Then I was able to run the test, but not without a workaround. It looks like need to set the `AWS_REGION`. Will dig into fixing this in time. 👌
 

@@ -3,6 +3,14 @@ ENV["JETS_ENV"] ||= "test"
 # Ensures aws api never called. Fixture home folder does not contain ~/.aws/credentails
 ENV['HOME'] = "spec/fixtures/home"
 
+if ENV['DYNAMODB_TEST_AWS_SECRET_ACCESS_KEY']
+  ENV['AWS_SECRET_ACCESS_KEY'] = ENV['DYNAMODB_TEST_AWS_SECRET_ACCESS_KEY']
+end
+if ENV['DYNAMODB_TEST_AWS_ACCESS_KEY_ID']
+  ENV['AWS_ACCESS_KEY_ID'] = ENV['DYNAMODB_TEST_AWS_ACCESS_KEY_ID']
+end
+ENV['AWS_REGION'] ||= 'us-west-2'
+
 require "byebug"
 require "fileutils"
 require "jets"

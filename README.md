@@ -1,5 +1,7 @@
 # Example DynamoDB Project with Dynomite
 
+[![BoltOps Badge](https://img.boltops.com/boltops/badges/boltops-badge.png)](https://www.boltops.com)
+
 Example project to help answer this question: [Running rspec over dynomite model with local dynamodb instance results in MissingCredentialsError](https://community.rubyonjets.com/t/running-rspec-over-dynomite-model-with-local-dynamodb-instance-results-in-missingcredentialserror/31/2)
 
 ## Some Tips
